@@ -1,0 +1,116 @@
+.body {
+    background-color: #293b58;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    height: 100%;
+    gap: 5%;
+    background-color: #293b58;
+    border-width: 2px;
+    border-color: rgb(158, 158, 158);
+    min-height: 600px;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+    border-width: 2px;
+    border-color: rgb(160, 160, 160);
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.vision {
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2px;
+    border-color: rgb(0, 140, 255);
+    min-height: 400px;
+}
+
+.item {
+    border-style: solid;
+    border-color: rgb(149, 149, 149);
+    height: 100%;
+}
+
+.green {
+    background-color: rgb(0, 255, 21);
+    color: black;
+    font-style: bold;
+    font-size: 1rem;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.yellow {
+    background-color: rgb(255, 208, 0);
+    color: rgb(0, 0, 0);
+    font-style: bold;
+    font-size: 1rem;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.red {
+    background-color: rgb(255, 38, 0);
+    color: rgb(255, 255, 255);
+    font-style: bold;
+    font-size: 1rem;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.left {
+    background-image: url("../img/arrow_left.png"), 
+                    linear-gradient(45deg, rgb(0, 208, 255), rgb(45, 91, 101));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.right {
+    background-image: url("../img/arrow_right.png"), 
+                    linear-gradient(45deg, rgb(0, 208, 255), rgb(48, 97, 108));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.front {
+    background-image: url("../img/arrow_front.png"), 
+                    linear-gradient(45deg, rgb(0, 255, 26), rgb(54, 127, 61));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.back {
+    background-image: url("../img/arrow_back.png"), 
+                    linear-gradient(45deg, rgb(250, 96, 0), rgb(111, 73, 49));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#status_connected {
+    background-image: url("../img/link-45deg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#status_connecting {
+    background-image: url("../img/hourglass-split.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#status_disconnected {
+    background-image: url("../img/x-circle-fill.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
