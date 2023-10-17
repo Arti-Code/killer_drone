@@ -3,10 +3,10 @@ import {auth} from './auth.js';
 const app = firebase.initializeApp(auth);
 const db = firebase.database();
 
-//const datachannel = document.getElementById('datachannel');
 //let localDescription = document.getElementById('localSessionDescription');
 let btnStart = document.getElementById('btn_start');
 let btnStop = document.getElementById('btn_stop');
+let btnIdle = document.getElementById('btn_idle');
 let btnRight = document.getElementById('btn_right');
 let btnLeft = document.getElementById('btn_left');
 let btnAhead = document.getElementById('btn_front');
@@ -19,7 +19,6 @@ let stat_connected = document.getElementById('status_connected');
 let device_id = "tankor";
 let pc;
 let dc;
-//let datachannel_on = false;
 let vision = document.getElementById('remoteVideos')
 vision.setAttribute('hidden', 'true');
 btnStart.addEventListener('touchend', init)
@@ -34,18 +33,6 @@ btnAhead.addEventListener('touchend', moveStop);
 btnBack.addEventListener('touchend', moveStop);
 btnLeft.addEventListener('touchend', moveStop);
 btnRight.addEventListener('touchend', moveStop);
-/* btnStart.addEventListener('mousedown', init)
-btnStop.addEventListener('mousedown', stopConnection);
-
-btnAhead.addEventListener('mousedown', moveFront);
-btnBack.addEventListener('mousedown', moveBack);
-btnLeft.addEventListener('mousedown', moveLeft);
-btnRight.addEventListener('mousedown', moveRight);
-
-btnAhead.addEventListener('mouseup', moveStop);
-btnBack.addEventListener('mouseup', moveStop);
-btnLeft.addEventListener('mouseup', moveStop);
-btnRight.addEventListener('mouseup', moveStop); */
 
 clearNegotiation()
 status_disconnected();
@@ -54,6 +41,8 @@ status_disconnected();
 
 function init() {
   //device_id = device_input.innerText;
+  status_connecting();
+  btnIdle.removeAttribute('hidden');
   info(device_id);
   vision.removeAttribute('hidden');
   //device_input.setAttribute('hidden', 'true');
@@ -67,15 +56,6 @@ function init() {
   );
   pc.addTransceiver('video', {'direction': 'recvonly'});
   create_datachannel('LINK');
-
-
-/*   pc.ontrack = function (event) {
-    myVideo.srcObject = event.streams[0]
-    myVideo.autoplay = true
-    myVideo.controls = true
-    //myVideo.style.width = "100%"
-    //myVideo.style.height = "100%"
-  }; */
 
   pc.ontrack = function (event) {
     var el = document.createElement(event.track.kind)
@@ -120,12 +100,10 @@ function create_datachannel(channel_name) {
   dc = pc.createDataChannel(channel_name);
   
   dc.onclose = () => {
-    //datachannel_on = false;
     info('link has closed');
   };
 
   dc.onopen = () => {
-    //datachannel_on = true;
     info('link has opened');
   };
 
@@ -174,6 +152,7 @@ function clearNegotiation() {
 }
 
 function wait_answer() {
+  btnIdle.removeAttribute('hidden')
   let on_answer = db.ref().child("signaling").child(device_id).child("answer");
   on_answer.on('value', (snapshot) => {
     set_remote_sdp(snapshot.val());
@@ -249,4 +228,5 @@ function status_connecting() {
 function status_connected() {
   hide_status_flags();
   stat_connected.removeAttribute('hidden');
+  btnIdle.setAttribute('hidden', 'true')
 };

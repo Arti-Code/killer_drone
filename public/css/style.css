@@ -10,7 +10,7 @@
     background-color: #293b58;
     border-width: 2px;
     border-color: rgb(158, 158, 158);
-    min-height: 600px;
+    min-height: 350px;
 }
 
 .grid-row {
@@ -44,6 +44,15 @@
 
 .green {
     background-color: rgb(0, 255, 21);
+    color: black;
+    font-style: bold;
+    font-size: 1rem;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.gray {
+    background-color: rgb(148, 148, 148);
     color: black;
     font-style: bold;
     font-size: 1rem;

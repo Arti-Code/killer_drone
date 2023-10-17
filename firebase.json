@@ -9,5 +9,23 @@
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 8011
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true,
+    "auth": {
+      "port": 8021
+    },
+    "firestore": {
+      "port": 8031
+    },
+    "database": {
+      "port": 4001
+    }
   }
 }
