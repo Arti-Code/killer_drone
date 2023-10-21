@@ -12,20 +12,20 @@
   },
   "emulators": {
     "hosting": {
-      "port": 8011
+      "port": 8000
     },
     "ui": {
       "enabled": true
     },
     "singleProjectMode": true,
     "auth": {
-      "port": 8021
+      "port": 8020
     },
     "firestore": {
-      "port": 8031
-    },
-    "database": {
-      "port": 4001
+      "port": 8030
+//    },
+//    "database": {
+//      "port": 4001
     }
   }
 }

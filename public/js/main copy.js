@@ -62,8 +62,8 @@ function init() {
     el.srcObject = event.streams[0]
     el.autoplay = true
     el.controls = true
-    //el.style.width = "100%"
-    //el.style.height = "100%"
+    el.style.width = "100%"
+    el.style.height = "100%"
     vision.appendChild(el)
   };
   
