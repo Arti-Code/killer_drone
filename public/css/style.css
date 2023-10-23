@@ -1,6 +1,6 @@
-/* .body {
+.body {
     background-color: #293b58;
-} */
+}
 
 .wrapper {
     display: grid;
@@ -50,8 +50,9 @@ video {
 
 .item {
     border-style: dotted;
-    border-color: rgb(255, 136, 0);
-    border-radius: 10px;
+    border-color: rgb(21, 255, 0);
+    border-width: 8px;
+    border-radius: 15px;
     border-spacing: 5px;
     height: 100%;
 }
@@ -135,4 +136,13 @@ video {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+#btn_start {
+    background-image: url("../img/bolt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: green;
+    color: chartreuse;
 }
