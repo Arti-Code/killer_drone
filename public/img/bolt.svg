@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m422-232 207-248H469l29-227-185 267h139l-30 208ZM320-80l40-280H160l360-520h80l-40 320h240L400-80h-80Zm151-390Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#30FF20;}
+</style>
+<g>
+	<path d="M8.3,21.8l1-7H4.5l8.7-12.5h1.6l-1,8h5.7L9.9,21.8H8.3z M10.2,19l6.1-7.3H12l0.8-6.4l-5.5,7.9H11L10.2,19z"/>
+	<path class="st0" d="M14.4,2.5l-0.9,7.4l-0.1,0.6H14h4.9l-9.2,11H8.6l0.9-6.4l0.1-0.6H9H5l8.3-12H14.4 M6.9,13.5h1h2.9l-0.7,4.6
+		l-0.3,1.7l1.1-1.4l5.2-6.2l0.7-0.8h-1.1h-3.4l0.7-5.1l0.3-2L12,6l-4.6,6.7L6.9,13.5 M15,2L15,2L15,2z M15,2h-2L4,15h5l-1,7h2l10-12
+		h-6L15,2L15,2z M7.8,13l4.6-6.7L11.7,12h4l-5.2,6.2l0.8-5.2H7.8L7.8,13z"/>
+</g>
+</svg>

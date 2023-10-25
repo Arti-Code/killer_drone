@@ -94,45 +94,49 @@ video {
 }
 
 .left {
-    background-image: url("../img/arrow_left.png");
+    background-image: url("../img/left.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .right {
-    background-image: url("../img/arrow_right.png");
+    background-image: url("../img/right.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .front {
-    background-image: url("../img/arrow_front.png");
+    background-image: url("../img/up.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .back {
-    background-image: url("../img/arrow_back.png");
+    background-image: url("../img/back.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 #status_connected {
-    background-image: url("../img/link-45deg.svg");
+    background-image: url("../img/link.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 
 #status_connecting {
-    background-image: url("../img/hourglass-split.svg");
+    background-image: url("../img/hourglass.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 
 #status_disconnected {
-    background-image: url("../img/x-circle-fill.svg");
+    background-image: url("../img/x-circle.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -143,6 +147,4 @@ video {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-color: green;
-    color: chartreuse;
 }

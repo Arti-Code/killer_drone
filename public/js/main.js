@@ -14,6 +14,7 @@ let btnBack = document.getElementById('btn_back');
 let stat_disconnected = document.getElementById('status_disconnected');
 let stat_connecting = document.getElementById('status_connecting');
 let stat_connected = document.getElementById('status_connected');
+let device_selector = document.getElementById("device_selector");
 //let device_input = document.getElementById('device_name');
 //let myVideo = document.getElementById("myVideo");
 let device_id = "tankor";
@@ -41,6 +42,7 @@ status_disconnected();
 
 function init() {
   //device_id = device_input.innerText;
+  //device_selector
   status_connecting();
   btnIdle.removeAttribute('hidden');
   info(device_id);
